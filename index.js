@@ -1,29 +1,23 @@
-//create a new empty array to hold the messages;
-let cardsMessage = []
+// create a new, empty array to hold the messages;
+let messages = [];
 
-//context of card message
-const cardContent = "surprise";
+// iterate through the input array and, inside the loop, build out the 'thank you' message for each name using string interpolation, then add that message to the new array you created;
+function writeCards(names, eventName) {
+    
+    for (let i = 0; i < names.length; i++) {
+        messages.push(`Thank you, ${names[i]}, for the wonderful ${eventName} gift!`)
+    };
 
-//names for thank you cards
-// const cardNames = ["Xavi", "Cathy", "Manny"];
-
-//create a custom message for each name inside the loop
-function writeCards(cardNames) {
-    for (let i = 0; i < cardNames.length; i++) {
-        cardsMessage.push(`Thank you, ${cardNames[i]}, for the wonderful ${cardContent} gift!`);
-
-    }
-    return cardsMessage;
+    // after the loop finishes and all of the messages have been added to the new array, return the new array.
+    return messages;
 }
 
-writeCards(cardNames);
-
-
-function countDown() {
-let number = 10;
-while (number >= 0) {
-    console.log(number--);
-    debugger;
+function countDown(num) {
+    let i = 0;
+    while (i <= num) {
+        console.log(num --);
     }
 }
+
+
 
